@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:03,440
+Nhiều người nghĩ dùng GitHub Copilot thì chỉ tự động hóa được trên GitHub. Không hề!
+
+2
+00:00:03,840 --> 00:00:08,800
+Đây là GitHub Copilot Desktop, kết nối với GitLab của công ty qua giao thức MCP.
+
+3
+00:00:09,200 --> 00:00:15,280
+Automation này được đặt lịch chạy lúc 2 giờ sáng mỗi đêm, nhưng để anh chị thấy tận mắt, tôi bấm chạy ngay bây giờ.
+
+4
+00:00:15,680 --> 00:00:22,880
+Agent đọc bộ quy tắc HVE Core ngay trên GitLab, quét code Kotlin, Scala, Angular và file CI, rồi kiểm tra pipeline.
+
+5
+00:00:23,280 --> 00:00:29,120
+Chỉ khoảng 1 phút là xong: agent báo số vi phạm, trạng thái pipeline và đường link tới bản nháp Merge Request.

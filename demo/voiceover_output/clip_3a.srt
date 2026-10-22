@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:04,720
+Đây là MR !402. Một bạn viết hàm tính tiền hoàn bằng kiểu Double.
+
+2
+00:00:05,120 --> 00:00:10,960
+Hoàn 11 đô thì máy tính ra 10.83, trong khi đúng phải là 10.84: khách bị hoàn thiếu 1 xu.
+
+3
+00:00:11,360 --> 00:00:16,800
+Tech Lead bắt được lỗi này khi review, bạn dev sửa sang BigDecimal, và MR được merge.
+
+4
+00:00:17,200 --> 00:00:23,520
+Nhưng câu hỏi là: lần sau ai bắt lỗi này? Bộ quy tắc HVE Core của chúng ta hiện chưa có dòng nào nói về tiền tệ.

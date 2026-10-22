@@ -1,0 +1,23 @@
+<main>
+  <h1>Thanh toán</h1>
+  <form (ngSubmit)="pay()">
+    <label>User ID <input name="userId" [(ngModel)]="form.userId" required /></label>
+    <label>Số thẻ <input name="cardNumber" [(ngModel)]="form.cardNumber" required /></label>
+    <label>CVV <input name="cvv" [(ngModel)]="form.cvv" required /></label>
+    <label>Số tiền ($) <input name="amount" type="number" step="0.01" [(ngModel)]="form.amount" required /></label>
+    <label>Ghi chú <input name="note" [(ngModel)]="form.note" /></label>
+    <button type="submit" [disabled]="paying()">{{ paying() ? 'Đang xử lý…' : 'Thanh toán' }}</button>
+  </form>
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  @if (result(); as r) {
+    <section>
+      <p>Trạng thái: <b>{{ r.status }}</b></p>
+      <p>Số tiền: {{ r.amount }} · Phí: {{ r.fee }} · Tổng: {{ r.total }}</p>
+      <app-payment-receipt [transactionId]="r.transactionId" />
+    </section>
+  }
+</main>

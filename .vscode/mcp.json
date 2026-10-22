@@ -1,0 +1,27 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "gitlab-token",
+      "description": "Local GitLab bot token (hve-bot, printed by gitlab-local/setup.sh)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "gitlab": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@zereight/mcp-gitlab@2.3.6"
+      ],
+      "env": {
+        "GITLAB_API_URL": "http://localhost:8929/api/v4",
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "${input:gitlab-token}",
+        "GITLAB_PERMISSION_MODE": "modify",
+        "GITLAB_TOOLS": "get_project,list_commits,get_commit_diff,get_file_contents,get_repository_tree,list_pipelines,list_pipeline_jobs,get_pipeline_job_output,list_merge_requests,create_branch,push_files,create_merge_request",
+        "GITLAB_DENIED_TOOLS_REGEX": "^(update_|delete_|merge_|approve_|unapprove_|protect_|unprotect_|resolve_|rebase_|create_issue|create_merge_request_thread|discover_tools|gitlab_api_request)",
+        "GITLAB_DISABLE_VERSION_CHECK": "true"
+      }
+    }
+  }
+}

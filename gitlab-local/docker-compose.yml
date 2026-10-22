@@ -1,0 +1,45 @@
+name: hve-demo
+
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:19.5.1-ce.0
+    container_name: hve-gitlab
+    hostname: gitlab
+    restart: unless-stopped
+    shm_size: 256m
+    ports:
+      - "8929:8929"
+      - "2224:22"
+    environment:
+      GITLAB_ROOT_PASSWORD: ${GITLAB_ROOT_PASSWORD:-HveDemo-2026!}
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://localhost:8929'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2224
+        gitlab_rails['usage_ping_enabled'] = false
+        # Laptop demo: trim memory
+        puma['worker_processes'] = 0
+        sidekiq['concurrency'] = 10
+        prometheus_monitoring['enable'] = false
+    volumes:
+      - gitlab-config:/etc/gitlab
+      - gitlab-logs:/var/log/gitlab
+      - gitlab-data:/var/opt/gitlab
+
+  runner:
+    image: gitlab/gitlab-runner:alpine-v19.4.1
+    container_name: hve-runner
+    restart: unless-stopped
+    depends_on: [gitlab]
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - runner-config:/etc/gitlab-runner
+
+networks:
+  default:
+    name: hve-demo-net
+
+volumes:
+  gitlab-config:
+  gitlab-logs:
+  gitlab-data:
+  runner-config:

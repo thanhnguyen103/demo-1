@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:09,680
+Microsoft đưa ra khuyến cáo rất rõ ràng: HVE Core phát triển nhanh và mang tính định hình cao. Hãy xem đây là nguồn pattern để học hỏi, không phải một thư viện phụ thuộc cứng cho production.
+
+2
+00:00:09,830 --> 00:00:14,790
+Nếu dùng như thư viện ngoài, dự án sẽ gặp rủi ro khi phụ thuộc vào upstream và đòi hỏi tương thích ngược.
+
+3
+00:00:14,940 --> 00:00:22,220
+Chiến lược chuẩn là Fork & Own: chọn lọc pattern phù hợp đưa vào .github/, dùng /hve-builder tùy chỉnh theo stack của team.
+
+4
+00:00:22,370 --> 00:00:26,770
+Nhờ đó, dự án toàn quyền sở hữu Rulebook và chủ động nâng cấp theo lộ trình riêng.

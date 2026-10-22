@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "deny": ["Read(~/**)", "Edit(~/**)", "Write(~/**)", "Glob(~/**)", "Grep(~/**)", "WebFetch", "WebSearch"]
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true,
+    "allowUnsandboxedCommands": false,
+    "network": { "allowedDomains": [] },
+    "filesystem": { "denyRead": ["~"] }
+  }
+}

@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:07,680
+Anh chị thấy đấy, dự án của chúng ta chạy đa ngôn ngữ: Backend là Scala và Kotlin, Frontend là Angular, và CI/CD chạy trên GitLab.
+
+2
+00:00:08,150 --> 00:00:11,410
+Bình thường một bạn Fullstack hoặc AI rất dễ quên quy tắc của từng công nghệ.
+
+3
+00:00:11,900 --> 00:00:14,530
+Nhưng với HVE Core, chỉ cần một dòng applyTo này,
+
+4
+00:00:14,970 --> 00:00:18,820
+AI sẽ tự động nạp đúng bộ luật tương ứng với từng file mà lập trình viên đang mở.

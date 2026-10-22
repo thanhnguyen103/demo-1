@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:02,080
+Chào anh chị em FPT Software!
+
+2
+00:00:02,230 --> 00:00:07,910
+Hôm nay chúng ta nói về giải pháp chuẩn hóa coding conventions cho GitHub Copilot từ IDE đến GitLab.
+
+3
+00:00:08,060 --> 00:00:15,020
+Đó là HVE Core của Microsoft — bộ quy chuẩn (Guardrails) đóng gói sẵn cho doanh nghiệp: Dễ dàng tùy biến, áp dụng ngay cho từng dự án.

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Every Harness² session (editors and reviewers) goes through this: no web tools, no MCP,
+# no reads of $HOME (repo, GitLab seed data, Claude transcripts), Bash sandboxed with no network.
+exec "/Users/thanhnd/.local/bin/claude" --settings "$(dirname "$0")/settings.json" --strict-mcp-config --disallowedTools WebFetch WebSearch "$@"

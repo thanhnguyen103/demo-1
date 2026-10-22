@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:04,960
+So sánh với BMAD Framework, cả hai công cụ đều có thế mạnh riêng theo từng bài toán.
+
+2
+00:00:05,110 --> 00:00:14,390
+BMAD tối ưu cho các dự án phát triển mới từ đầu (Greenfield): phân vai Agile để xây dựng bộ tài liệu đặc tả PRD và kiến trúc kỹ thuật trước khi code.
+
+3
+00:00:14,540 --> 00:00:21,980
+HVE Core tối ưu cho các dự án Brownfield đang hoạt động, cần kiểm soát chất lượng code và đồng bộ coding conventions cho GitHub Copilot.
+
+4
+00:00:22,130 --> 00:00:25,730
+Hai phương pháp hoàn toàn có thể bổ trợ cho nhau trong suốt vòng đời dự án.

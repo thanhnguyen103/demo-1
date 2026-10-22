@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:02,080
+Chào anh chị em FPT Software!
+
+2
+00:00:02,230 --> 00:00:07,910
+Hôm nay chúng ta nói về giải pháp chuẩn hóa coding conventions cho GitHub Copilot từ IDE đến GitLab.
+
+3
+00:00:08,060 --> 00:00:15,020
+Đó là HVE Core của Microsoft — bộ quy chuẩn (Guardrails) đóng gói sẵn cho doanh nghiệp: Dễ dàng tùy biến, áp dụng ngay cho từng dự án.
+
+4
+00:00:15,370 --> 00:00:21,770
+Hãy nhìn đoạn code Kotlin này. Copilot viết nó trong 3 giây: biên dịch thành công, unit test pass, nhìn qua tưởng như ổn.
+
+5
+00:00:21,920 --> 00:00:30,400
+Nhưng khi chạy, dòng log làm lộ toàn bộ số thẻ và mã CVV của khách. Còn tiền tệ thì tính bằng kiểu Double, tiềm ẩn rủi ro sai số làm tròn.
+
+6
+00:00:30,550 --> 00:00:35,030
+Copilot không sai về cú pháp. Nó chỉ chưa được định hướng theo chuẩn riêng của dự án.
+
+7
+00:00:35,180 --> 00:00:43,340
+Việc mỗi dự án tự viết prompt thủ công rất tốn thời gian, thiếu đồng nhất và dễ bị Prompt Drift. Trong khi Microsoft đã tối ưu sẵn bộ khung chuẩn dành riêng cho Copilot.
+
+8
+00:00:43,690 --> 00:00:52,170
+HVE Core (Hypervelocity Engineering Core) là bộ instructions, prompts, agents và skills viết sẵn cho GitHub Copilot.
+
+9
+00:00:52,320 --> 00:00:56,480
+Cốt lõi là quy trình RPI Workflow: Research, Plan, Implement, Review.
+
+10
+00:00:56,630 --> 00:01:05,430
+Skill /hve-builder giúp tự động nhân bản và tùy chỉnh pattern phù hợp với stack của dự án, đi kèm bộ instructions bảo mật chuẩn OWASP và NIST.
+
+11
+00:01:05,580 --> 00:01:10,380
+Cài đặt linh hoạt qua Extension VS Code hoặc Plugin cho Copilot CLI.
+
+12
+00:01:10,730 --> 00:01:15,290
+Cơ chế cốt lõi là ngữ cảnh hóa quy chuẩn theo từng loại file qua thuộc tính applyTo.
+
+13
+00:01:15,440 --> 00:01:24,720
+Mở file Kotlin, Copilot tự động kích hoạt quy chuẩn Backend. Mở file TypeScript, nó kích hoạt quy chuẩn Frontend. Mở GitLab CI, nó nạp quy chuẩn CI/CD.
+
+14
+00:01:24,870 --> 00:01:30,470
+Quy chuẩn lưu trực tiếp trong Git repo, được review qua Merge Request và có lịch sử rõ ràng.
+
+15
+00:01:30,620 --> 00:01:39,660
+Lưu ý rằng Custom Instructions chỉ định hướng cho AI sinh code đúng, không thay thế hoàn toàn SAST scanner. Vẫn cần Code Review và CI Pipeline.
+
+16
+00:01:40,010 --> 00:01:45,610
+RPI Workflow giải quyết triệt để rủi ro AI can thiệp code trực tiếp mà thiếu kiểm soát, chia việc thành 4 bước.
+
+17
+00:01:45,760 --> 00:01:55,920
+Bước 1: Research là khảo sát chỉ đọc để hiểu rõ repo và APIs. Bước 2: Plan lập kế hoạch bằng Markdown, tích hợp bước tự đánh giá (Self-Validation) để Tech Lead phê duyệt.
+
+18
+00:01:56,070 --> 00:02:03,510
+Bước 3: Implement thực thi chính xác theo kế hoạch và chạy unit test. Bước 4: Review đối chiếu kết quả với kế hoạch và tiêu chuẩn dự án.
+
+19
+00:02:03,660 --> 00:02:08,140
+Trong bài demo, lệnh /hve-review là công cụ được customized từ pattern này.
+
+20
+00:02:08,490 --> 00:02:18,170
+Microsoft đưa ra khuyến cáo rất rõ ràng: HVE Core phát triển nhanh và mang tính định hình cao. Hãy xem đây là nguồn pattern để học hỏi, không phải một thư viện phụ thuộc cứng cho production.
+
+21
+00:02:18,320 --> 00:02:23,280
+Nếu dùng như thư viện ngoài, dự án sẽ gặp rủi ro khi phụ thuộc vào upstream và đòi hỏi tương thích ngược.
+
+22
+00:02:23,430 --> 00:02:30,710
+Chiến lược chuẩn là Fork & Own: chọn lọc pattern phù hợp đưa vào .github/, dùng /hve-builder tùy chỉnh theo stack của team.
+
+23
+00:02:30,860 --> 00:02:35,260
+Nhờ đó, dự án toàn quyền sở hữu Rulebook và chủ động nâng cấp theo lộ trình riêng.
+
+24
+00:02:35,610 --> 00:02:39,050
+Bước tiếp theo là mở rộng năng lực của Copilot ra ngoài IDE.
+
+25
+00:02:39,200 --> 00:02:48,480
+Với Copilot Automations kết hợp GitLab MCP Server, hệ thống có thể chạy tự động theo lịch Nightly Job lúc 2:00 AM hoặc kích hoạt On-demand.
+
+26
+00:02:48,630 --> 00:02:56,550
+Agent đọc quy chuẩn HVE Core và quét commit mới trên develop, tự sửa vi phạm trên nhánh riêng và mở Draft Merge Request kèm bảng phân tích lỗi.
+
+27
+00:02:56,700 --> 00:03:06,380
+Cơ chế bảo mật 3 lớp (3-Tier Security Gate): MCP chặn quyền merge và xóa, bot chỉ là Developer, và chỉ Maintainer con người mới có quyền merge vào nhánh chính.
+
+28
+00:03:06,730 --> 00:03:09,850
+Quy chuẩn viết sẵn không thể lường trước mọi lỗi phát sinh.
+
+29
+00:03:10,000 --> 00:03:20,800
+Ở case-study MR !402, lỗi sai số do dùng kiểu Double cho dữ liệu tài chính làm khách bị hoàn thiếu 1 xu. Tech Lead phát hiện và yêu cầu chuyển sang BigDecimal.
+
+30
+00:03:20,950 --> 00:03:32,310
+Harness², framework mã nguồn mở của Google Research, chạy mô phỏng reviewer trên code của MR đó, đề xuất và thử nghiệm các phiên bản rule mới, rồi tự động mở Draft MR !403.
+
+31
+00:03:32,460 --> 00:03:38,860
+Quy chuẩn được rút ra từ sự cố thực tế, có gắn tag máy sinh, và quyền quyết định cuối cùng hoàn toàn thuộc về Tech Lead.
+
+32
+00:03:39,210 --> 00:03:44,170
+So sánh với BMAD Framework, cả hai công cụ đều có thế mạnh riêng theo từng bài toán.
+
+33
+00:03:44,320 --> 00:03:53,600
+BMAD tối ưu cho các dự án phát triển mới từ đầu (Greenfield): phân vai Agile để xây dựng bộ tài liệu đặc tả PRD và kiến trúc kỹ thuật trước khi code.
+
+34
+00:03:53,750 --> 00:04:01,190
+HVE Core tối ưu cho các dự án Brownfield đang hoạt động, cần kiểm soát chất lượng code và đồng bộ coding conventions cho GitHub Copilot.
+
+35
+00:04:01,340 --> 00:04:04,940
+Hai phương pháp hoàn toàn có thể bổ trợ cho nhau trong suốt vòng đời dự án.
+
+36
+00:04:05,290 --> 00:04:14,010
+Ngay sau đây, xin mời anh chị theo dõi bài Live Demo 6 phút trên môi trường thực tế: GitLab CE local, Backend Scala/Kotlin, cùng Frontend Angular.
+
+37
+00:04:14,160 --> 00:04:24,320
+Demo 1: HVE Core bảo vệ code trong IDE. Demo 2: Copilot Automation tự động quét và mở Merge Request. Demo 3: Harness² tự học quy chuẩn từ lỗi thực tế.
+
+38
+00:04:24,470 --> 00:04:26,550
+Xin mời anh chị cùng bắt đầu phần Demo!

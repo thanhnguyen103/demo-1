@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:05,600
+RPI Workflow giải quyết triệt để rủi ro AI can thiệp code trực tiếp mà thiếu kiểm soát, chia việc thành 4 bước.
+
+2
+00:00:05,750 --> 00:00:15,910
+Bước 1: Research là khảo sát chỉ đọc để hiểu rõ repo và APIs. Bước 2: Plan lập kế hoạch bằng Markdown, tích hợp bước tự đánh giá (Self-Validation) để Tech Lead phê duyệt.
+
+3
+00:00:16,060 --> 00:00:23,500
+Bước 3: Implement thực thi chính xác theo kế hoạch và chạy unit test. Bước 4: Review đối chiếu kết quả với kế hoạch và tiêu chuẩn dự án.
+
+4
+00:00:23,650 --> 00:00:28,130
+Trong bài demo, lệnh /hve-review là công cụ được customized từ pattern này.

@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:05,800
+Hãy nhìn vào lỗi kinh điển này ở Backend: Khi anh em dùng case class trong Scala hay data class trong Kotlin,
+
+2
+00:00:05,800 --> 00:00:10,620
+hàm toString mặc định sẽ in sạch số thẻ và mã CVV của khách ra log hệ thống!
+
+3
+00:00:11,120 --> 00:00:17,030
+Và ở phía Angular, AI hay tiện tay dùng bypassSecurityTrustHtml gây lỗi bảo mật XSS.
+
+4
+00:00:17,570 --> 00:00:20,980
+Khi chạy qua bước Review của HVE Core, nó lập tức tuýt còi cả hai:
+
+5
+00:00:20,980 --> 00:00:25,290
+Tự động viết lại hàm toString() để che số thẻ thành ****-1234,
+
+6
+00:00:25,640 --> 00:00:31,040
+đồng thời gỡ bỏ hàm nguy hiểm trên Angular và thêm luôn takeUntilDestroyed() để chống tràn bộ nhớ.

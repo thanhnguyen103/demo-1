@@ -1,0 +1,17 @@
+# Language & Build caches
+.metals/
+.scala-build/
+.bloop/
+.venv/
+__pycache__/
+*.py[cod]
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Demo build artifacts & temporary raw audio (~90 MB)
+demo/concat_slides.txt
+demo/slides_images/
+demo/**/*.wav
+demo/**/__pycache__/

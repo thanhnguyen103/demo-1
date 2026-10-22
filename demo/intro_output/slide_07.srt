@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:03,440
+Bước tiếp theo là mở rộng năng lực của Copilot ra ngoài IDE.
+
+2
+00:00:03,590 --> 00:00:12,870
+Với Copilot Automations kết hợp GitLab MCP Server, hệ thống có thể chạy tự động theo lịch Nightly Job lúc 2:00 AM hoặc kích hoạt On-demand.
+
+3
+00:00:13,020 --> 00:00:20,940
+Agent đọc quy chuẩn HVE Core và quét commit mới trên develop, tự sửa vi phạm trên nhánh riêng và mở Draft Merge Request kèm bảng phân tích lỗi.
+
+4
+00:00:21,090 --> 00:00:30,770
+Cơ chế bảo mật 3 lớp (3-Tier Security Gate): MCP chặn quyền merge và xóa, bot chỉ là Developer, và chỉ Maintainer con người mới có quyền merge vào nhánh chính.

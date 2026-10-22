@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:04,560
+Cơ chế cốt lõi là ngữ cảnh hóa quy chuẩn theo từng loại file qua thuộc tính applyTo.
+
+2
+00:00:04,710 --> 00:00:13,990
+Mở file Kotlin, Copilot tự động kích hoạt quy chuẩn Backend. Mở file TypeScript, nó kích hoạt quy chuẩn Frontend. Mở GitLab CI, nó nạp quy chuẩn CI/CD.
+
+3
+00:00:14,140 --> 00:00:19,740
+Quy chuẩn lưu trực tiếp trong Git repo, được review qua Merge Request và có lịch sử rõ ràng.
+
+4
+00:00:19,890 --> 00:00:28,930
+Lưu ý rằng Custom Instructions chỉ định hướng cho AI sinh code đúng, không thay thế hoàn toàn SAST scanner. Vẫn cần Code Review và CI Pipeline.

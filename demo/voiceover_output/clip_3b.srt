@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:06,560
+Mảnh ghép cuối cùng là Harness², framework mã nguồn mở của Google Research, giúp agent tự cải thiện bộ khung của chính nó.
+
+2
+00:00:06,960 --> 00:00:10,240
+Ở đây, bộ khung đó chính là file quy tắc HVE Core.
+
+3
+00:00:10,640 --> 00:00:18,080
+Điểm quan trọng: Harness² không hề được xem bình luận của Tech Lead. Nó chỉ nhận code của MR !402 đúng lúc vừa gửi.
+
+4
+00:00:18,480 --> 00:00:23,120
+Đề xuất: nó đưa ra hai hướng sửa, một về quy trình review, một bổ sung kiến thức nghiệp vụ.
+
+5
+00:00:23,520 --> 00:00:29,040
+Thăm dò: nó chạy thật cả hai. Chỉ hướng thêm quy tắc tiền tệ là bắt được đúng dòng 6 của Refund.kt.
+
+6
+00:00:29,440 --> 00:00:33,360
+Kết hợp: nó gộp lại thành bộ quy tắc mới và mở Draft MR này.
+
+7
+00:00:33,760 --> 00:00:37,760
+Đến lúc đó mới đem ra đối chiếu: quy tắc mới bắt đúng dòng mà Tech Lead đã bắt.
+
+8
+00:00:38,160 --> 00:00:46,240
+Harness² tự đánh giá độ tin cậy là thấp, và đánh dấu quy tắc này cần đội xác nhận. Máy học ra quy tắc, con người quyết định có đưa vào hay không.

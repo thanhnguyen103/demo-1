@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="100%" height="100%">
+  <!-- Background -->
+  <rect x="0" y="0" width="500" height="450" rx="20" fill="#1e293b" opacity="0.6"/>
+
+  <text x="250" y="45" font-family="sans-serif" font-size="16" font-weight="bold" fill="#94a3b8" text-anchor="middle">HỆ SINH THÁI AI TOOLS HIỆN NAY</text>
+
+  <!-- 4 Tool Cards in 2x2 Grid -->
+  <!-- 1. GitHub Copilot -->
+  <g transform="translate(40, 70)">
+    <rect x="0" y="0" width="195" height="150" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="97" cy="55" r="32" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="97" y="65" font-size="30" text-anchor="middle">🤖</text>
+    <text x="97" y="110" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">GitHub Copilot</text>
+    <text x="97" y="132" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Chat, Inline, Agent</text>
+  </g>
+
+  <!-- 2. Claude / Claude Code -->
+  <g transform="translate(265, 70)">
+    <rect x="0" y="0" width="195" height="150" rx="14" fill="#0f172a" stroke="#d97706" stroke-width="2"/>
+    <circle cx="97" cy="55" r="32" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+    <text x="97" y="65" font-size="30" text-anchor="middle">🧠</text>
+    <text x="97" y="110" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Claude Code</text>
+    <text x="97" y="132" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Anthropic Sonnet 3.7</text>
+  </g>
+
+  <!-- 3. Cursor IDE -->
+  <g transform="translate(40, 245)">
+    <rect x="0" y="0" width="195" height="150" rx="14" fill="#0f172a" stroke="#a855f7" stroke-width="2"/>
+    <circle cx="97" cy="55" r="32" fill="#1e293b" stroke="#c084fc" stroke-width="2"/>
+    <text x="97" y="65" font-size="30" text-anchor="middle">⚡</text>
+    <text x="97" y="110" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Cursor IDE</text>
+    <text x="97" y="132" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Composer &amp; Rules</text>
+  </g>
+
+  <!-- 4. ChatGPT / Custom LLMs -->
+  <g transform="translate(265, 245)">
+    <rect x="0" y="0" width="195" height="150" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="2"/>
+    <circle cx="97" cy="55" r="32" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <text x="97" y="65" font-size="30" text-anchor="middle">💬</text>
+    <text x="97" y="110" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">ChatGPT / LLMs</text>
+    <text x="97" y="132" font-family="sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Custom Assistants</text>
+  </g>
+
+  <text x="250" y="425" font-family="sans-serif" font-size="13" font-weight="bold" fill="#f59e0b" text-anchor="middle">⚠️ Nhiều công cụ nhưng thiếu quy chuẩn chung!</text>
+</svg>

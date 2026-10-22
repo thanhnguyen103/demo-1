@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:06,400
+Hãy nhìn đoạn code Kotlin này. Copilot viết nó trong 3 giây: biên dịch thành công, unit test pass, nhìn qua tưởng như ổn.
+
+2
+00:00:06,550 --> 00:00:15,030
+Nhưng khi chạy, dòng log làm lộ toàn bộ số thẻ và mã CVV của khách. Còn tiền tệ thì tính bằng kiểu Double, tiềm ẩn rủi ro sai số làm tròn.
+
+3
+00:00:15,180 --> 00:00:19,660
+Copilot không sai về cú pháp. Nó chỉ chưa được định hướng theo chuẩn riêng của dự án.
+
+4
+00:00:19,810 --> 00:00:27,970
+Việc mỗi dự án tự viết prompt thủ công rất tốn thời gian, thiếu đồng nhất và dễ bị Prompt Drift. Trong khi Microsoft đã tối ưu sẵn bộ khung chuẩn dành riêng cho Copilot.

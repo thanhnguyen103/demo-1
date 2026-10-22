@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" width="100%" height="100%">
+  <!-- Night sky background -->
+  <rect x="0" y="0" width="500" height="450" rx="20" fill="#0f172a"/>
+  
+  <!-- Stars -->
+  <circle cx="80" cy="60" r="2" fill="#ffffff" opacity="0.8"/>
+  <circle cx="160" cy="40" r="3" fill="#fef08a" opacity="0.9"/>
+  <circle cx="380" cy="50" r="2" fill="#ffffff" opacity="0.7"/>
+  <circle cx="430" cy="90" r="3" fill="#ffffff" opacity="0.8"/>
+  <circle cx="100" cy="120" r="2" fill="#fde047" opacity="0.6"/>
+
+  <!-- Crescent Moon -->
+  <path d="M 400 40 A 35 35 0 0 0 440 95 A 45 45 0 1 1 400 40 Z" fill="#fef08a"/>
+
+  <!-- Clock showing 02:00 AM -->
+  <circle cx="120" cy="110" r="45" fill="#1e293b" stroke="#38bdf8" stroke-width="4"/>
+  <circle cx="120" cy="110" r="4" fill="#38bdf8"/>
+  <line x1="120" y1="110" x2="120" y2="80" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="120" y1="110" x2="140" y2="100" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+  <text x="120" y="175" font-family="sans-serif" font-size="14" font-weight="bold" fill="#38bdf8" text-anchor="middle">⏰ 02:00 AM</text>
+
+  <!-- Friendly Bot in the Center -->
+  <!-- Antenna -->
+  <line x1="260" y1="120" x2="260" y2="85" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="260" cy="80" r="10" fill="#22c55e"/>
+
+  <!-- Bot Head -->
+  <rect x="200" y="120" width="120" height="95" rx="22" fill="#334155" stroke="#38bdf8" stroke-width="5"/>
+  <!-- Eyes -->
+  <circle cx="235" cy="165" r="14" fill="#0284c7"/>
+  <circle cx="235" cy="165" r="6" fill="#38bdf8"/>
+  <circle cx="285" cy="165" r="14" fill="#0284c7"/>
+  <circle cx="285" cy="165" r="6" fill="#38bdf8"/>
+  <!-- Smile -->
+  <path d="M 245 190 Q 260 202 275 190" fill="none" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Bot Body -->
+  <rect x="190" y="225" width="140" height="110" rx="16" fill="#1e293b" stroke="#64748b" stroke-width="4"/>
+  <!-- Heart / Screen on body: GitLab logo -->
+  <rect x="215" y="245" width="90" height="60" rx="8" fill="#0f172a" stroke="#fc6d26" stroke-width="2"/>
+  <text x="260" y="275" font-family="sans-serif" font-size="16" font-weight="bold" fill="#fc6d26" text-anchor="middle">🦊 GitLab</text>
+  <text x="260" y="295" font-family="sans-serif" font-size="11" font-weight="bold" fill="#22c55e" text-anchor="middle">MCP Active</text>
+
+  <!-- Arms holding Coffee and Laptop -->
+  <!-- Left arm holding Coffee cup -->
+  <line x1="190" y1="260" x2="145" y2="280" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
+  <rect x="130" y="270" width="25" height="30" rx="4" fill="#f59e0b"/>
+  <text x="142" y="290" font-size="14" text-anchor="middle">☕</text>
+
+  <!-- Right arm holding Draft MR flag -->
+  <line x1="330" y1="260" x2="380" y2="240" stroke="#64748b" stroke-width="8" stroke-linecap="round"/>
+  <rect x="375" y="200" width="110" height="45" rx="6" fill="#1e1b4b" stroke="#a855f7" stroke-width="2"/>
+  <text x="430" y="222" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e9d5ff" text-anchor="middle">Draft MR</text>
+  <text x="430" y="238" font-family="sans-serif" font-size="9" fill="#a855f7" text-anchor="middle">Auto-created by Bot</text>
+
+  <!-- Ground -->
+  <line x1="50" y1="365" x2="450" y2="365" stroke="#334155" stroke-width="4" stroke-linecap="round"/>
+  <text x="250" y="405" font-family="sans-serif" font-size="16" font-weight="bold" fill="#38bdf8" text-anchor="middle">NIGHTLY AUTOMATION GATE: 2:00 AM</text>
+</svg>

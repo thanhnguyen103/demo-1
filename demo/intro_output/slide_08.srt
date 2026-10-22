@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:03,120
+Quy chuẩn viết sẵn không thể lường trước mọi lỗi phát sinh.
+
+2
+00:00:03,270 --> 00:00:14,070
+Ở case-study MR !402, lỗi sai số do dùng kiểu Double cho dữ liệu tài chính làm khách bị hoàn thiếu 1 xu. Tech Lead phát hiện và yêu cầu chuyển sang BigDecimal.
+
+3
+00:00:14,220 --> 00:00:25,580
+Harness², framework mã nguồn mở của Google Research, chạy mô phỏng reviewer trên code của MR đó, đề xuất và thử nghiệm các phiên bản rule mới, rồi tự động mở Draft MR !403.
+
+4
+00:00:25,730 --> 00:00:32,130
+Quy chuẩn được rút ra từ sự cố thực tế, có gắn tag máy sinh, và quyền quyết định cuối cùng hoàn toàn thuộc về Tech Lead.

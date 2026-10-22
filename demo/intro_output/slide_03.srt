@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:08,480
+HVE Core (Hypervelocity Engineering Core) là bộ instructions, prompts, agents và skills viết sẵn cho GitHub Copilot.
+
+2
+00:00:08,630 --> 00:00:12,790
+Cốt lõi là quy trình RPI Workflow: Research, Plan, Implement, Review.
+
+3
+00:00:12,940 --> 00:00:21,740
+Skill /hve-builder giúp tự động nhân bản và tùy chỉnh pattern phù hợp với stack của dự án, đi kèm bộ instructions bảo mật chuẩn OWASP và NIST.
+
+4
+00:00:21,890 --> 00:00:26,690
+Cài đặt linh hoạt qua Extension VS Code hoặc Plugin cho Copilot CLI.

@@ -1,0 +1,11 @@
+1
+00:00:00,000 --> 00:00:08,720
+Ngay sau đây, xin mời anh chị theo dõi bài Live Demo 6 phút trên môi trường thực tế: GitLab CE local, Backend Scala/Kotlin, cùng Frontend Angular.
+
+2
+00:00:08,870 --> 00:00:19,030
+Demo 1: HVE Core bảo vệ code trong IDE. Demo 2: Copilot Automation tự động quét và mở Merge Request. Demo 3: Harness² tự học quy chuẩn từ lỗi thực tế.
+
+3
+00:00:19,180 --> 00:00:21,260
+Xin mời anh chị cùng bắt đầu phần Demo!

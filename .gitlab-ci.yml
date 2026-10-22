@@ -1,0 +1,38 @@
+stages:
+  - test
+  - build
+  - deploy
+
+kotlin-test:
+  stage: test
+  image: eclipse-temurin:21-jdk
+  script:
+    - cd payment-backend/kotlin-service
+    - ./gradlew test --no-daemon
+
+scala-test:
+  stage: test
+  image: sbtscala/scala-sbt:eclipse-temurin-21.0.12_8_1.13.0_3.3.8
+  script:
+    - cd payment-backend/scala-service
+    - sbt -batch test
+
+frontend-build:
+  stage: build
+  image: node:latest
+  script:
+    - cd frontend
+    - npm ci
+    - npx ng build
+  artifacts:
+    paths:
+      - frontend/dist/
+
+deploy-payment:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploying with key $PAYMENT_GATEWAY_API_KEY"
+    - ls -R frontend/dist
+  rules:
+    - if: $CI_COMMIT_BRANCH == "develop"
